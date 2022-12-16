@@ -20,9 +20,10 @@ class DefaultTasksRepositoryTest {
     private val task1 = Task("Title1", "Description1")
     private val task2 = Task("Title2", "Description2")
     private val task3 = Task("Title3", "Description3")
+    private val task4 = Task("Title4", "Description4")
     private val remoteTasks = listOf(task1, task2).sortedBy { it.id }
     private val localTasks = listOf(task3).sortedBy { it.id }
-    private val newTasks = listOf(task3).sortedBy { it.id }
+    private val newTasks = listOf(task4).sortedBy { it.id }
     private lateinit var tasksRemoteDataSource: FakeDataSource
     private lateinit var tasksLocalDataSource: FakeDataSource
 

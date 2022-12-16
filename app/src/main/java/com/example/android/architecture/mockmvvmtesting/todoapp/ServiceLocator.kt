@@ -7,7 +7,7 @@ import com.example.android.architecture.mockmvvmtesting.todoapp.data.source.Defa
 import com.example.android.architecture.mockmvvmtesting.todoapp.data.source.TasksDataSource
 import com.example.android.architecture.mockmvvmtesting.todoapp.data.source.TasksRepository
 import com.example.android.architecture.mockmvvmtesting.todoapp.data.source.local.TasksLocalDataSource
-import com.example.android.architecture.mockmvvmtesting.todoapp.data.source.local.ToDoDatabase
+import com.example.android.architecture.mockmvvmtesting.todoapp.data.source.local.ToDatabase
 import com.example.android.architecture.mockmvvmtesting.todoapp.data.source.remote.TasksRemoteDataSource
 import kotlinx.coroutines.runBlocking
 
@@ -18,7 +18,7 @@ import kotlinx.coroutines.runBlocking
 object ServiceLocator {
 
     private val lock = Any()
-    private var database: ToDoDatabase? = null
+    private var database: ToDatabase? = null
     @Volatile
     var tasksRepository: TasksRepository? = null
         @VisibleForTesting set
@@ -40,10 +40,10 @@ object ServiceLocator {
         return TasksLocalDataSource(database.taskDao())
     }
 
-    private fun createDataBase(context: Context): ToDoDatabase {
+    private fun createDataBase(context: Context): ToDatabase {
         val result = Room.databaseBuilder(
             context.applicationContext,
-            ToDoDatabase::class.java, "Tasks.db"
+            ToDatabase::class.java, "Tasks.db"
         ).build()
         database = result
         return result
