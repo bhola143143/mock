@@ -5,12 +5,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.util.UUID
 
-/*
- * @param title       title of the task
- * @param description description of the task
- * @param isCompleted whether or not this task is completed
- * @param id          id of the task
- */
+
 @Entity(tableName = "tasks")
 data class Task @JvmOverloads constructor(
     @ColumnInfo(name = "title")
