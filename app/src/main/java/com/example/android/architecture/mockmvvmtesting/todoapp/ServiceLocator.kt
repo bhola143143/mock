@@ -11,10 +11,7 @@ import com.example.android.architecture.mockmvvmtesting.todoapp.data.source.loca
 import com.example.android.architecture.mockmvvmtesting.todoapp.data.source.remote.TasksRemoteDataSource
 import kotlinx.coroutines.runBlocking
 
-/**
- * A Service Locator for the [TasksRepository]. This is the prod version, with a
- * the "real" [TasksRemoteDataSource].
- */
+
 object ServiceLocator {
 
     private val lock = Any()
