@@ -77,13 +77,7 @@ class TasksViewModel(
         loadTasks(true)
     }
 
-    /**
-     * Sets the current task filtering type.
-     *
-     * @param requestType Can be [TasksFilterType.ALL_TASKS],
-     * [TasksFilterType.COMPLETED_TASKS], or
-     * [TasksFilterType.ACTIVE_TASKS]
-     */
+
     fun setFiltering(requestType: TasksFilterType) {
         currentFiltering = requestType
 

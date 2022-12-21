@@ -8,9 +8,7 @@ import com.example.android.architecture.mockmvvmtesting.todoapp.data.Task
 
 
 
-/**
- * [BindingAdapter]s for the [Task]s list.
- */
+
 @BindingAdapter("app:items")
 fun setItems(listView: RecyclerView, items: List<Task>?) {
     items?.let {
