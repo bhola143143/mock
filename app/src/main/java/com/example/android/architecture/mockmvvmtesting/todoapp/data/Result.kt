@@ -2,10 +2,7 @@ package com.example.android.architecture.mockmvvmtesting.todoapp.data
 
 import com.example.android.architecture.mockmvvmtesting.todoapp.data.Result.Success
 
-/**
- * A generic class that holds a value with its loading status.
- * @param <T>
- */
+
 sealed class Result<out R> {
 
     data class Success<out T>(val data: T) : Result<T>()
@@ -21,8 +18,5 @@ sealed class Result<out R> {
     }
 }
 
-/**
- * `true` if [Result] is of type [Success] & holds non-null [Success.data].
- */
 val Result<*>.succeeded
     get() = this is Success && data != null
