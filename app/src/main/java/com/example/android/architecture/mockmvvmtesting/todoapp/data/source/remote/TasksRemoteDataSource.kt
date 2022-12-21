@@ -85,7 +85,7 @@ object TasksRemoteDataSource : TasksDataSource {
     }
 
     override suspend fun completeTask(taskId: String) {
-        // Not required for the remote data source
+
     }
 
     override suspend fun activateTask(task: Task) {
@@ -94,7 +94,7 @@ object TasksRemoteDataSource : TasksDataSource {
     }
 
     override suspend fun activateTask(taskId: String) {
-        // Not required for the remote data source
+
     }
 
     override suspend fun clearCompletedTasks() {
